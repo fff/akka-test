@@ -1,6 +1,9 @@
-test about akka-http with Mist
+test about akka-http with Mist.
+Most of codes were from http://doc.akka.io/http
 
 current status:failed with jetty
+
+http://localhost:8080/akkatest_2.8.1-1.0.3/simple/new
 
 java.lang.ClassCastException: org.eclipse.jetty.server.AsyncContinuation cannot be cast to org.eclipse.jetty.server.AsyncContinuation
 	at akka.http.JettyContinuation$class.$init$(JettyContinuation.scala:28)
