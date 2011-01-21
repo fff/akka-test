@@ -1,0 +1,39 @@
+test about akka-http with Mist
+
+current status:failed with jetty
+
+java.lang.ClassCastException: org.eclipse.jetty.server.AsyncContinuation cannot be cast to org.eclipse.jetty.server.AsyncContinuation
+	at akka.http.JettyContinuation$class.$init$(JettyContinuation.scala:28)
+	at akka.http.JettyContinuationMethodFactory$$anon$2.<init>(JettyContinuation.scala:108)
+	at akka.http.JettyContinuationMethodFactory$.Get(JettyContinuation.scala:108)
+	at akka.http.AkkaMistServlet$$anonfun$doGet$1.apply(Mist.scala:152)
+	at akka.http.AkkaMistServlet$$anonfun$doGet$1.apply(Mist.scala:152)
+	at akka.http.Mist$class.mistify(Mist.scala:109)
+	at akka.http.AkkaMistServlet.mistify(Mist.scala:140)
+	at akka.http.AkkaMistServlet.doGet(Mist.scala:152)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:527)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:423)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:456)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:225)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:930)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:358)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:183)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:866)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:245)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:113)
+	at org.eclipse.jetty.server.Server.handle(Server.java:351)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:594)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:1042)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:549)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.eclipse.jetty.server.HttpConnection.handle(HttpConnection.java:424)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:506)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:436)
+	at java.lang.Thread.run(Thread.java:680)
+^C
+
